@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Building13\Blackbird\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class BlackbirdCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-blackbird-ui';
 
     public $description = 'My command';
 
