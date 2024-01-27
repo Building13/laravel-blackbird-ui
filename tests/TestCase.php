@@ -2,9 +2,9 @@
 
 namespace Building13\Blackbird\Tests;
 
+use Building13\Blackbird\BlackbirdServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Building13\Blackbird\BlackbirdServiceProvider;
 
 class TestCase extends Orchestra
 {

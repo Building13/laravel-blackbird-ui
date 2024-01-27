@@ -2,9 +2,9 @@
 
 namespace Building13\Blackbird;
 
+use Building13\Blackbird\Commands\BlackbirdCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Building13\Blackbird\Commands\BlackbirdCommand;
 
 class BlackbirdServiceProvider extends PackageServiceProvider
 {
