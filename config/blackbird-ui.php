@@ -7,7 +7,7 @@ return [
     'components' => [
         'carousel' => Components\Carousel\Carousel::class,
         'carousel.item' => Components\Carousel\Item::class,
-        'contain' => Components\Layout\Contain::class,
+        'layout.contain' => Components\Layout\Contain::class,
     ],
 
     'prefix' => '',
