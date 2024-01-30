@@ -84,7 +84,7 @@
             tabindex="0"
             role="listbox"
             aria-labelledby="carousel-content-label"
-            class="flex w-full snap-x snap-mandatory overflow-x-scroll bg-red-500 p-16">
+            class="flex w-full snap-x snap-mandatory overflow-x-scroll">
             {{ $slot }}
         </ul>
 
