@@ -7,7 +7,9 @@ return [
     'components' => [
         'carousel' => Components\Carousel\Carousel::class,
         'carousel.item' => Components\Carousel\Item::class,
-        'layout.contain' => Components\Layout\Contain::class,
+        'layouts.app' => Components\Layouts\App::class,
+        'layouts.contain' => Components\Layouts\Contain::class,
+        'video.youtube' => Components\Video\YouTube::class,
     ],
 
     'prefix' => '',

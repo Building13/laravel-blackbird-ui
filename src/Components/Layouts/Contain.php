@@ -1,13 +1,12 @@
 <?php
 
-namespace Building13\Blackbird\Components\Layout;
+namespace Building13\Blackbird\Components\Layouts;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
 class Contain extends Component
 {
-    public $title;
 
     public function __construct()
     {
@@ -15,6 +14,6 @@ class Contain extends Component
 
     public function render(): View
     {
-        return view('blackbird-ui::components.layout.contain');
+        return view('blackbird-ui::components.layouts.contain');
     }
 }
