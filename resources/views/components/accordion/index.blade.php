@@ -4,8 +4,8 @@
         :class="{ 'border-b ': open }">
         <span itemprop="name">{{ $title }}</span>
         <span class="pl-4">
-            <x-fas-caret-up x-show="open" x-cloak class="group-hover:text-team-action h-4 w-4" />
-            <x-fas-caret-down x-show="!open" class="group-hover:text-team-action h-4 w-4" />
+            <x-fas-caret-up x-show="open" x-cloak class="text-action group-hover:text-action h-4 w-4" />
+            <x-fas-caret-down x-show="!open" class="text-action group-hover:text-action h-4 w-4" />
         </span>
     </button>
     <div x-show="open"
