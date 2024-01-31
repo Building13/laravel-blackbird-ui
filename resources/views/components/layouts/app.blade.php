@@ -42,7 +42,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-base font-brand-sans-regular text-brand-bone antialiased">
+<body class="bg-base font-brand-sans-regular text-brand-bone text-foreground antialiased">
     <div class="min-h-screen">
         {{ $header ?? '' }}
         <main>
@@ -51,7 +51,6 @@
         {{ $footer ?? '' }}
     </div>
     @stack('scripts')
-
 </body>
 
 </html>

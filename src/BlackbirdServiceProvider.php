@@ -47,5 +47,12 @@ class BlackbirdServiceProvider extends PackageServiceProvider
             }
             Blade::component($componentClass, $alias);
         }
+
+        foreach (config('blackbird-ui.anonymous-components', []) as $alias => $viewPath) {
+            if ($prefix) {
+                Blade::component($viewPath, $prefix . '-' . $alias);
+            }
+            Blade::component($viewPath,  $alias);
+        }
     }
 }
