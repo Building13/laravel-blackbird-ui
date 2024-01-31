@@ -7,6 +7,7 @@ return [
     'components' => [
         'accordion' => Components\Accordion\Accordion::class,
         'accordion.group' => Components\Accordion\Group::class,
+        'button' => Components\Button\Button::class,
         'carousel' => Components\Carousel\Carousel::class,
         'carousel.item' => Components\Carousel\Item::class,
         'layouts.app' => Components\Layouts\App::class,
