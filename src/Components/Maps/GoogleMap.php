@@ -1,13 +1,12 @@
 <?php
 
-namespace  Building13\Blackbird\Components\Maps;
+namespace Building13\Blackbird\Components\Maps;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
 class GoogleMap extends Component
 {
-
     public function __construct(
 
         public string $width = '100%',

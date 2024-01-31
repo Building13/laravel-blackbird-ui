@@ -7,7 +7,6 @@ use Illuminate\View\View;
 
 class Section extends Component
 {
-
     public function __construct()
     {
     }

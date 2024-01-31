@@ -7,8 +7,6 @@ use Illuminate\View\View;
 
 class App extends Component
 {
-
-
     public function __construct(
         public string $title = 'Blackbird UI',
     ) {

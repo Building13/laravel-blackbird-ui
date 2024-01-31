@@ -7,7 +7,6 @@ use Illuminate\View\View;
 
 class Prose extends Component
 {
-
     public function __construct()
     {
     }

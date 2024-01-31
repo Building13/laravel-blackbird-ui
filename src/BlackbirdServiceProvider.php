@@ -2,16 +2,9 @@
 
 namespace Building13\Blackbird;
 
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\View;
+use Building13\Blackbird\Commands\BlackbirdCommand;
 use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
-use App\View\Components\Alpinejs\Carousel;
-use Illuminate\View\Compilers\BladeCompiler;
-use App\View\Components\Alpinejs\CarouselItem;
-use Building13\Blackbird\Components\Blocks\Block;
-use Building13\Blackbird\Commands\BlackbirdCommand;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class BlackbirdServiceProvider extends PackageServiceProvider
@@ -36,23 +29,22 @@ class BlackbirdServiceProvider extends PackageServiceProvider
         $this->bootBladeComponents();
     }
 
-
     public function bootBladeComponents()
     {
         $prefix = config('blackbird-ui.prefix', '');
 
         foreach (config('blackbird-ui.components', []) as $alias => $componentClass) {
             if ($prefix) {
-                Blade::component($componentClass, $prefix . '-' . $alias);
+                Blade::component($componentClass, $prefix.'-'.$alias);
             }
             Blade::component($componentClass, $alias);
         }
 
         foreach (config('blackbird-ui.anonymous-components', []) as $alias => $viewPath) {
             if ($prefix) {
-                Blade::component($viewPath, $prefix . '-' . $alias);
+                Blade::component($viewPath, $prefix.'-'.$alias);
             }
-            Blade::component($viewPath,  $alias);
+            Blade::component($viewPath, $alias);
         }
     }
 }

@@ -21,7 +21,7 @@ return [
     'anonymous-components' => [
         'dl' => 'blackbird-ui::components.dl.dl',
         'dt' => 'blackbird-ui::components.dl.dt',
-        'dd' => 'blackbird-ui::components.dl.dd'
+        'dd' => 'blackbird-ui::components.dl.dd',
     ],
 
     'prefix' => '',
