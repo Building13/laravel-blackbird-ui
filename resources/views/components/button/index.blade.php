@@ -1,5 +1,5 @@
 @if ($href)
-    <a href="" class="button">
+    <a href="{{ $href }}" class="button">
         {{ $slot }}
     </a>
 @else
