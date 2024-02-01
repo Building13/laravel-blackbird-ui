@@ -15,6 +15,8 @@ return [
         'layouts.prose' => Components\Layouts\Prose::class,
         'layouts.section' => Components\Layouts\Section::class,
         'maps.google-map' => Components\Maps\GoogleMap::class,
+        'social.button' => Components\Social\SocialButton::class,
+        'social.nav' => Components\Social\SocialNav::class,
         'video.youtube' => Components\Video\YouTube::class,
         'video.vimeo' => Components\Video\Vimeo::class,
     ],
