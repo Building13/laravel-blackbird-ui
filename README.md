@@ -5,15 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/building13/laravel-blackbird-ui/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/building13/laravel-blackbird-ui/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/building13/laravel-blackbird-ui.svg?style=flat-square)](https://packagist.org/packages/building13/laravel-blackbird-ui)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-blackbird-ui.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-blackbird-ui)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This is package is very much WIP.
 
 ## Installation
 
@@ -36,18 +28,54 @@ You can publish the config file with:
 php artisan vendor:publish --tag="laravel-blackbird-ui-config"
 ```
 
-This is the contents of the published config file:
+<!-- This is the contents of the published config file:
 
 ```php
 return [
 ];
-```
+``` -->
 
 Optionally, you can publish the views using
 
 ```bash
 php artisan vendor:publish --tag="laravel-blackbird-ui-views"
 ```
+
+## Requirements
+
+This packages includes basic style classes based on TailwindCSS.
+
+Make sure TailwindCSS is installed and make sure to render the tailwind classes in the package views. You can inlude the following in your tailwind.config.js:
+
+```js
+content: [
+    './vendor/building13/laravel-blackbird-ui/resources/views/**/*.blade.php',`
+]
+```
+
+While this package is in early development and not on Packagist, add this repo to your composer file.
+
+```json
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Building13/laravel-blackbird-ui"
+        }
+    ],
+```
+
+You can also clone and develop locally in a Laravel project. To do that, you can update the repositories to the following:
+```json
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../laravel-blackbird-ui"
+        },
+    ]
+}
+```
+
 
 ## Usage
 
@@ -76,7 +104,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Nathan Gross](https://github.com/Building13)
+- [Nathan Gross](https://github.com/nathangross)
 - [All Contributors](../../contributors)
 
 ## License
