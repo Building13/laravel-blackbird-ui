@@ -76,6 +76,17 @@ You can also clone and develop locally in a Laravel project. To do that, you can
 }
 ```
 
+If you are having issues with Tailwind CSS IntelliSense plugin, try ignoring this path:
+
+```json
+{
+    "tailwindCSS.files.exclude": [
+        "**/testbench-core/**"
+    ],
+}
+```
+
+Tailwind CSS IntelliSense
 
 ## Usage
 
