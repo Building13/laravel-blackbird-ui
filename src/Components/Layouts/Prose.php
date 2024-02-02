@@ -5,7 +5,7 @@ namespace Building13\Blackbird\Components\Layouts;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class Contain extends Component
+class Prose extends Component
 {
     public function __construct()
     {
@@ -13,6 +13,6 @@ class Contain extends Component
 
     public function render(): View
     {
-        return view('blackbird-ui::components.layouts.contain');
+        return view('blackbird-ui::components.layouts.prose');
     }
 }

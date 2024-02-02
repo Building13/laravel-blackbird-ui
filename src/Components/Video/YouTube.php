@@ -1,6 +1,6 @@
 <?php
 
-namespace  Building13\Blackbird\Components\Video;
+namespace Building13\Blackbird\Components\Video;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
