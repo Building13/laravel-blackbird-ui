@@ -12,6 +12,7 @@ class GoogleMap extends Component
         public string $width = '100%',
         public string $height = '400px',
         public string $zoom = '8',
+        public string $source = '',
         // public string $latitude = '51.5074',
         // public string $longitude = '0.1278',
         public string $address = 'London, UK',

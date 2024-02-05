@@ -1,16 +1,6 @@
-{{-- <iframe
-    width="{{ $width }}"
-    height="{{ $height }}"
-    frameborder="0" style="border:0"
-    src="https://www.google.com/maps?q={{ urlencode($address) }}&output=embed"
-    allowfullscreen>
-</iframe> --}}
 <iframe
-    width="{{ $width }}"
-    height="{{ $height }}"
-    frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?key={{ $apikey }}&q={{ urlencode($address) }}&zoom={{ $zoom }}&maptype={{ $type }}"
-    allowfullscreen>
-</iframe>
+    src="{!! $source !!}"
+    width="100%" height="{{ $height }}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 @push('scripts')
 @endpush
