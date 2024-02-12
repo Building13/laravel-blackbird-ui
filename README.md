@@ -66,14 +66,12 @@ While this package is in early development and not on Packagist, add this repo t
 
 You can also clone and develop locally in a Laravel project. To do that, you can update the repositories to the following:
 ```json
-{
-    "repositories": [
+"repositories": [
         {
             "type": "path",
             "url": "../laravel-blackbird-ui"
         },
-    ]
-}
+    ],
 ```
 
 If you are having issues with Tailwind CSS IntelliSense plugin, try ignoring this path:

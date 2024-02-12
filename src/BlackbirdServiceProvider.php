@@ -24,6 +24,16 @@ class BlackbirdServiceProvider extends PackageServiceProvider
             ->hasCommand(BlackbirdCommand::class);
     }
 
+    public function boot()
+    {
+        // if ($this->app->runningInConsole()) {
+        //     $this->publishes([
+        //         __DIR__ . '/../resources/tailwind/tailwind.config.js' => base_path('tailwind.config.js'),
+        //         __DIR__ . '/../resources/css/app.css' => resource_path('css/app.css'),
+        //     ], 'your-package-name-assets');
+        // }
+    }
+
     public function packageBooted()
     {
         $this->bootBladeComponents();
@@ -35,14 +45,14 @@ class BlackbirdServiceProvider extends PackageServiceProvider
 
         foreach (config('blackbird-ui.components', []) as $alias => $componentClass) {
             if ($prefix) {
-                Blade::component($componentClass, $prefix.'-'.$alias);
+                Blade::component($componentClass, $prefix . '-' . $alias);
             }
             Blade::component($componentClass, $alias);
         }
 
         foreach (config('blackbird-ui.anonymous-components', []) as $alias => $viewPath) {
             if ($prefix) {
-                Blade::component($viewPath, $prefix.'-'.$alias);
+                Blade::component($viewPath, $prefix . '-' . $alias);
             }
             Blade::component($viewPath, $alias);
         }
