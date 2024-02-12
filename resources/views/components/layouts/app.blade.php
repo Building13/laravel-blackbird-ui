@@ -23,7 +23,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
 
     <!-- Android/Google Icons -->
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" href="/favicons/favicon.ico">
 
     <!-- Microsoft Tiles (for Windows) -->
@@ -38,11 +37,13 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    @stack('head')
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-base font-brand-sans-regular text-brand-bone text-foreground antialiased">
+<body class="bg-base font-brand-sans-regular text-foreground antialiased">
     <div class="min-h-screen">
         {{ $header ?? '' }}
         <main>
