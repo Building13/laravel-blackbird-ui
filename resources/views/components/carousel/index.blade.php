@@ -26,7 +26,7 @@
         disableNextAndPreviousButtons: {
             'x-intersect:enter.threshold.05'() {
                 let slideEls = this.$el.parentElement.children
-    
+
                 // If this is the first slide.
                 if (slideEls[0] === this.$el) {
                     this.atBeginning = true
@@ -37,7 +37,7 @@
             },
             'x-intersect:leave.threshold.05'() {
                 let slideEls = this.$el.parentElement.children
-    
+
                 // If this is the first slide.
                 if (slideEls[0] === this.$el) {
                     this.atBeginning = false
@@ -48,7 +48,7 @@
             },
         },
     }"
-    class="flex w-full flex-col">
+    class="{{ $attributes->merge(['class' => 'w-full flex flex-col']) }}">
     <div
         x-on:keydown.right="next"
         x-on:keydown.left="prev"
