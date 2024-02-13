@@ -14,6 +14,7 @@ class Surface extends Component
         public string $colorLevel = 'level-0',
         public string $borderLevel = 'level-0',
         public string $elevationLevel = 'level-0',
+        public string $translucenceLevel = 'level-0',
         public string $classes = '',
     ) {
         $this->colorLevel = (int) str_replace('level-', '', $colorLevel);
