@@ -5,16 +5,13 @@ namespace Building13\Blackbird\Components\Carousel;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Carousel extends Component
+class Button extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $title = 'Carousel',
-        public string $contentTitle = 'Carousel Content',
-        public string $prevButton = '',
-        public string $nextButton = '',
+        public string $direction = 'prev',
     ) {
         //
     }
@@ -24,6 +21,6 @@ class Carousel extends Component
      */
     public function render(): View
     {
-        return view('blackbird-ui::components.carousel.index');
+        return view('blackbird-ui::components.carousel.button');
     }
 }

@@ -47,8 +47,7 @@
                 }
             },
         },
-    }"
-    class="{{ $attributes->merge(['class' => 'w-full flex flex-col']) }}">
+    }">
     <div
         x-on:keydown.right="next"
         x-on:keydown.left="prev"
@@ -56,56 +55,36 @@
         role="region"
         aria-labelledby="carousel-label"
         class="relative flex">
-        <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+        <h2 id="carousel-label" class="sr-only" hidden>{{ $title }}</h2>
 
         <!-- Prev Button -->
-        <div class="absolute inset-y-0 left-0 flex items-center px-4">
-            <button
-                x-on:click="prev"
-                class="hover:bg-brand-bone/50 rounded-full text-6xl transition-all"
-                :aria-disabled="atBeginning"
-                :tabindex="atEnd ? -1 : 0"
-                :class="{ 'opacity-50 hover:bg-brand-bone/0 cursor-not-allowed': atBeginning }">
-                <span aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-bone h-12 w-12" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </span>
-                <span class="sr-only">Skip to previous slide page</span>
-            </button>
-        </div>
 
-        <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+        @if ($prevButton)
+            {{ $prevButton }}
+        @else
+            <x-carousel.button direction="previous" />
+        @endif
 
+        <span id="carousel-content-label" class="sr-only" hidden>{{ $contentTitle }}</span>
+
+        {{-- Carousel Content --}}
         <ul
             x-ref="slider"
             tabindex="0"
             role="listbox"
             aria-labelledby="carousel-content-label"
-            class="flex w-full snap-x snap-mandatory overflow-x-scroll">
+            {{ $attributes->merge(['class' => 'flex w-full snap-x snap-mandatory overflow-x-scroll h-full']) }}>
             {{ $slot }}
         </ul>
 
         <!-- Next Button -->
-        <div class="absolute inset-y-0 right-0 flex items-center px-4">
-            <button
-                x-on:click="next"
-                class="hover:bg-brand-bone/50 rounded-full text-6xl transition-all"
-                :aria-disabled="atEnd"
-                :tabindex="atEnd ? -1 : 0"
-                :class="{ 'opacity-50 cursor-not-allowed': atEnd }">
-                <span aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-bone h-12 w-12" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </span>
-                <span class="sr-only">Skip to next slide page</span>
-            </button>
-        </div>
+        @if ($nextButton)
+            {{ $nextButton }}
+        @else
+            <x-carousel.button direction="next" />
+        @endif
+
     </div>
 </div>
 @push('scripts')

@@ -5,16 +5,13 @@ namespace Building13\Blackbird\Components\Accordion;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Accordion extends Component
+class Button extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public string $title = 'Accordion',
-        public string $button = '',
-        public string $body = '',
-    ) {
+    public function __construct(public string $label = 'Accordion Button')
+    {
         //
     }
 

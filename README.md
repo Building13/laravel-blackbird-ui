@@ -43,6 +43,13 @@ php artisan vendor:publish --tag="laravel-blackbird-ui-views"
 
 ## Requirements
 
+Several components in this package rely on Alpine and Alpine plugins. 
+
+```
+npm install alpinejs
+npm install @alpinejs/intersect
+```
+
 This packages includes basic style classes based on TailwindCSS.
 
 Make sure TailwindCSS is installed and make sure to render the tailwind classes in the package views. You can inlude the following in your tailwind.config.js:
@@ -85,6 +92,20 @@ If you are having issues with Tailwind CSS IntelliSense plugin, try ignoring thi
 ```
 
 Tailwind CSS IntelliSense
+
+## CSS
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+}
+
+```
 
 ## Usage
 

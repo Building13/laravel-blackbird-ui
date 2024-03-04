@@ -15,14 +15,16 @@ class Surface extends Component
         public string $borderLevel = 'level-0',
         public string $elevationLevel = 'level-0',
         public string $translucenceLevel = 'level-0',
+        public bool $rounded = false,
         public string $classes = '',
     ) {
         $this->colorLevel = (int) str_replace('level-', '', $colorLevel);
         $this->borderLevel = (int) str_replace('level-', '', $borderLevel);
         $this->elevationLevel = (int) str_replace('level-', '', $elevationLevel);
 
-        $defaultClasses = '';
-        $colorClasses = ['', 'bg-level-1', 'bg-level-2', 'bg-level-3', 'bg-level-4'];
+        $defaultClasses = $rounded ? 'rounded-lg overflow-hidden' : '';
+
+        $colorClasses = ['', 'bg-level-1', 'bg-level-2', 'bg-level-3', 'bg-level-4', 'bg-level--1', 'bg-level--2', 'bg-level--3', 'bg-level--4'];
         $borderClasses = ['', 'border border-level-1', 'border border-level-2', 'border border-level-3', 'border border-level-4'];
         $shadowClasses = ['', 'shadow-1', 'shadow-2', 'shadow-3', 'shadow-4'];
 

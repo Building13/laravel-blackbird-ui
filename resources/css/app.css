@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-        --color-action: 19deg 97% 62%;
+        --color-accent: 19deg 97% 62%;
 
         --shadow-color: 19deg 2% 65%;
 
@@ -30,7 +30,7 @@
     }
     @media (prefers-color-scheme: dark) {
         :root {
-            --color-action: 19deg 97% 62%;
+            --color-accent: 19deg 97% 62%;
 
             --border-level-1: 19deg 2% 18%;
             --border-level-2: 19deg 2% 20%;
