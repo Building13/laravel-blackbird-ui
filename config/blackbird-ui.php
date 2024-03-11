@@ -17,7 +17,7 @@ return [
         'layouts.prose' => Components\Layouts\Prose::class,
         'layouts.section' => Components\Layouts\Section::class,
         'maps.google-map' => Components\Maps\GoogleMap::class,
-        'sections.hero' => Components\Sections\Hero::class,
+        'hero' => Components\Hero\Hero::class,
         'social.button' => Components\Social\SocialButton::class,
         'social.nav' => Components\Social\SocialNav::class,
         'surface' => Components\Surface\Surface::class,

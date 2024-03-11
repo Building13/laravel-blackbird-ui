@@ -1,5 +1,5 @@
 <section {{ $attributes }}>
-    <div class="relative flex aspect-video">
+    <div class="relative flex">
         <img class="h-full w-full object-cover" src="{{ $image }}" alt="{{ $imageAlt }}" />
         <div @class([
             'absolute  z-10',

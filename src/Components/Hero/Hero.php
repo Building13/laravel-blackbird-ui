@@ -1,6 +1,6 @@
 <?php
 
-namespace Building13\Blackbird\Components\Sections;
+namespace Building13\Blackbird\Components\Hero;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -28,6 +28,6 @@ class Hero extends Component
      */
     public function render(): View
     {
-        return view('blackbird-ui::components.sections.hero');
+        return view('blackbird-ui::components.hero.index');
     }
 }
